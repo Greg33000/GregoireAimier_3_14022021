@@ -1,0 +1,20 @@
+{
+  "name": "gregoireaimier_3_14022021",
+  "version": "1.0.0",
+  "description": "Projet 3 de la formation OpenClassrooms Developpeur WEB",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Greg33000/GregoireAimier_3_14022021.git"
+  },
+  "author": "Gregoire Aimier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Greg33000/GregoireAimier_3_14022021/issues"
+  },
+  "homepage": "https://github.com/Greg33000/GregoireAimier_3_14022021#readme"
+}
