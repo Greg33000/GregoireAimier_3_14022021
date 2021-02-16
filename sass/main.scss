@@ -8,16 +8,16 @@
 
 
 // Import base
-//@import "./base/base";
+@import "./base/base";
 @import "./base/typography";
 
 // Import components
 //@import "./components/buttons";
 
 // Import layout
-//@import "./layout/header";
+@import "./layout/header";
 //@import "./layout/nav";
-//@import "./layout/container";
+@import "./layout/container";
 //@import "./layout/form";
 
 // Import pages
@@ -26,3 +26,7 @@
 //@import "./pages/project";
 
 // Import themes
+
+p,h1,h2,h3{
+    margin:0px;
+}
