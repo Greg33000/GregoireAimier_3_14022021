@@ -12,10 +12,11 @@
 @import "./base/typography";
 
 // Import components
-//@import "./components/buttons";
+@import "./components/buttons";
 
 // Import layout
 @import "./layout/header";
+@import "./layout/footer";
 //@import "./layout/nav";
 @import "./layout/container";
 //@import "./layout/form";

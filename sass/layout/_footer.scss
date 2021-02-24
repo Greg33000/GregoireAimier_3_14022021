@@ -1,0 +1,32 @@
+.footer {
+    color: $color-writing-secondary;
+    background: $color-writing-primary;
+    height: 200px;
+    width:100%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding-left:$margin-mobile + $margin-mobile /2;
+    padding-bottom:20px;
+    h2{
+        font-family: 'Shrikhand', cursive;
+        padding: 30px 0px 10px 0px;
+        font-size:1.5rem;
+    }
+    a{
+        text-decoration:none ;
+        color: $color-writing-secondary;
+    }
+    ul{
+        list-style: none;
+        padding:0px;
+        margin:0px;
+        
+    }
+    li{
+        margin:5px 0px;
+    }
+    i{
+        width:20px;
+        margin-right:5px;
+    }
+}

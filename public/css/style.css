@@ -39,9 +39,27 @@ h1 {
   font-family: "Shrikhand", cursive;
 }
 
+.btn {
+  border-radius: 2rem;
+  box-shadow: 0px 5px 10px grey;
+  color: #fff;
+  background: linear-gradient(#FF79DA, #9356DC);
+  height: 50px;
+  width: 185px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+
 .header {
   height: 4rem;
-  padding-top: 1rem;
+  padding-top: 0.2rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -72,30 +90,114 @@ h1 {
   align-items: center;
 }
 
+.footer {
+  color: #fff;
+  background: black;
+  height: 200px;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding-left: 5.25%;
+  padding-bottom: 20px;
+}
+.footer h2 {
+  font-family: "Shrikhand", cursive;
+  padding: 30px 0px 10px 0px;
+  font-size: 1.5rem;
+}
+.footer a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.footer li {
+  margin: 5px 0px;
+}
+.footer i {
+  width: 20px;
+  margin-right: 5px;
+}
+
 .box {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  width: 90%;
+  width: 93%;
   background-color: white;
   margin: 10px;
+  cursor: pointer;
+  height: 65px;
+  border-right: 0rem solid #99E2D0;
+  transition: all 900ms;
   border-radius: 1rem;
   box-shadow: 0px 5px 10px grey;
+  box-sizing: border-box;
+}
+.box:hover {
+  border-right-width: 80px;
 }
 .box__check {
-  background-color: #99E2D0;
-  height: 68px;
-  width: 30px;
+  height: 65px;
+  width: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: allwidth 900ms 250ms;
+}
+.box__check i {
+  color: #fff;
+  font-size: 1.3rem;
+  transition: all 900ms;
+  transform: rotate(-180deg);
+  overflow: hidden;
+  position: relative;
+  right: 0;
 }
 .box__description {
   width: 100%;
+  padding: 10px 3.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.box__description h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .box__description div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
+}
+.box__description div p:nth-child(1) {
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.box__description div p:nth-child(2) {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.box__description:hover + .box__check {
+  width: 80px;
+  overflow: hidden;
+  margin-right: -80px;
+}
+.box__description:hover + .box__check i {
+  transform: rotate(0deg);
+  font-size: 1.3rem;
+  overflow: hidden;
 }
 
 .menu {
@@ -108,14 +210,18 @@ h1 {
   justify-content: space-between;
   align-items: center;
   margin-top: 0px;
-  width: 90%;
-  margin: 0px 5%;
+  width: 93%;
+  margin: 0px 3.5%;
 }
 .menu > div i {
   font-size: 1.8rem;
+  margin-right: 1.75%;
+  cursor: pointer;
+  background-color: #FF79DA;
 }
 .menu > div h1 {
   font-size: 1.8rem;
+  margin-left: 1.75%;
 }
 .menu section {
   display: flex;
@@ -124,18 +230,15 @@ h1 {
   align-items: center;
   margin: 2rem 0px;
 }
+.menu section:last-child {
+  margin-bottom: 0px;
+  padding-bottom: 60px;
+}
 .menu h2 {
-  width: 90%;
-}
-.menu h3 {
-  font-size: 1.2rem;
-}
-.menu p {
-  font-size: 1rem;
+  width: 89.5%;
 }
 
 .background {
-  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -146,6 +249,24 @@ h1 {
   height: 40px;
   border-radius: 50px 50px 0px 0px;
   background-color: #F2F2F2;
+}
+.background--dim-menu {
+  height: 310px;
+}
+.background--dim-index {
+  height: 150px;
+  width: 100%;
+}
+.background--dim-index article {
+  width: 100%;
+}
+
+.trait {
+  width: 45px;
+  border-bottom: #99E2D0 3px solid;
+  height: 6px;
+  align-self: flex-start;
+  margin: 0px 0px 5px 5.25%;
 }
 
 p, h1, h2, h3 {

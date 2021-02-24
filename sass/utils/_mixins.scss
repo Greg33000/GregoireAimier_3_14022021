@@ -22,6 +22,11 @@
     align-items: center;
 }
 
+@mixin tronc-mots{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 
 
@@ -48,17 +53,3 @@
         }
 }
 
-@mixin btn {
-//    padding: $grid-gutter;
-    @include border;
-    color: $color-primary;
-    background: $color-secondary;
-    cursor: pointer;
-    &:hover{
-        background: $color-primary;
-    }
-    &--full-width {
-        width: 100%;
-        margin: 0 auto;
-    }
-}
