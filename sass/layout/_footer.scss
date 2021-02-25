@@ -1,6 +1,6 @@
 .footer {
     color: $color-writing-secondary;
-    background: $color-writing-primary;
+    background: lighten($color-writing-primary,20%);
     height: 200px;
     width:100%;
     font-size: 1.1rem;

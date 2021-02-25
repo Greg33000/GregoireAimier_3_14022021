@@ -3,7 +3,7 @@
     color: $color-writing-secondary;
     background: linear-gradient($color-secondary, $color-primary);
     height: 50px;
-    width:185px;
+    min-width:120px;
     font-size: 1.1rem;
     font-weight: bold;
     @include flex-center;
@@ -11,4 +11,5 @@
         opacity:0.9;
     }
     cursor: pointer;
+    padding:0px 25px;
 }

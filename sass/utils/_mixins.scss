@@ -1,8 +1,9 @@
 @mixin background-menus {
     @each $menu,$img in $bkgd-img{
         .#{$menu} .background{
-            background: url("../img/restaurants/#{$img}") no-repeat scroll center;
+            background-image: url("../img/restaurants/#{$img}") ;
             background-size: cover;
+            background-repeat: no-repeat;
         }
     }
 }

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="public/css/styles.css" />
+        <link rel="stylesheet" href="public/css/style.css" />
         <title>ohmyfood - Accueil</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
 
@@ -11,119 +11,124 @@
     </head>
 
     <body>
-        <header>
-            <img src="public/img/logo/ohmyfood.png" alt="Photo_logo" />
+        <header  class="header">
+            <a></a>
+            <div class="header__logo">
+                <img src="public/img/logo/ohmyfood.png" alt="Photo_logo" />
+            </div>
         </header>
-        <section>
-            <article>
-                <i id="icone_géo" class="fas fa-map-marker-alt">Paris, Belleville</i>
-                <p>TEST</p>
-            </article>
-            <article>
-                <h1>réservez le menu qui vous convient</h1>
-                <p>découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#activité"> 
-                                explorer nos restaurants
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </article>
-        </section>
-        <section>
-            <h2>fonctionnement</h2>
-            <article>
-                <p>1</p>
-                <i class="fas fa-mobile-alt"></i>
-                <p>choisissez un restaurant</p>
-            </article>
-            <article>
-                <p>2</p>
-                <i class="fas fa-list-ul"></i>
-                <p>composez votre menu</p>
-            </article>
-            <article>
-                <p>3</p>
-                <i class="fas fa-store"></i>
-                <p>dégustez au restaurant</p>
-            </article>
-        </section>
-        <section>
-            <h2>restaurants</h2>
-            <a href="menu1.html" class="menu1">
-                <article>
-                    <div class="background background--dim-index">
-                        <article></article>
-                        <p>nouveau</p>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>la palette du goût</h3>
-                            <p>ménilmontant</p>
-                        </div>
-                        <p>
-                            <i class="fas fa-heart"></i>
-                        </p>
-                    </div> 
+        <main class="index">
+            <section class="index__reservation">
+                <article class="recherche">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Paris, Belleville</p>
                 </article>
-            </a>
-            <a href="menu2.html">
-                <article>
-                    <div>
-                        <!-- La photo sera en arrière plan mais c'est pour qu'elle soit référencée CEO? -->
-                        <img src="public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo"/>
-                        <p>nouveau</p>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>la note enchantée</h3>
-                            <p>charonne</p>
-                        </div>
-                        <p>
-                            <i class="fas fa-heart"></i>
-                        </p>
-                    </div> 
+                <article class="reservation">
+                    <h1>réservez le menu qui vous convient</h1>
+                    <p>découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a class="btn" href="#activité"> 
+                                    explorer nos restaurants
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </article>
-            </a>
-            <a href="menu3.html">
+            </section>
+            <section class="index__fonctionnement">
+                <h2>fonctionnement</h2>
                 <article>
-                    <div>
-                        <!-- La photo sera en arrière plan mais c'est pour qu'elle soit référencée CEO? -->
-                        <img src="public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo"/>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>à la française</h3>
-                            <p>cité rouge</p>
-                        </div>
-                        <p>
-                            <i class="fas fa-heart"></i>
-                        </p>
-                    </div> 
+                    <p>1</p>
+                    <i class="fas fa-mobile-alt"></i>
+                    <p>choisissez un restaurant</p>
                 </article>
-            </a>
-            <a href="menu4.html">
                 <article>
-                    <div>
-                        <!-- La photo sera en arrière plan mais c'est pour qu'elle soit référencée CEO? -->
-                        <img src="public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo"/>
-                    </div>
-                    <div>
-                        <div>
-                            <h3>Le délice des sens</h3>
-                            <p>Folie-Méricourt</p>
-                        </div>
-                        <p>
-                            <i class="fas fa-heart"></i>
-                        </p>
-                    </div> 
+                    <p>2</p>
+                    <i class="fas fa-list-ul"></i>
+                    <p>composez votre menu</p>
                 </article>
-            </a>
-        </section>
-        <footer>
+                <article>
+                    <p>3</p>
+                    <i class="fas fa-store"></i>
+                    <p>dégustez au restaurant</p>
+                </article>
+            </section>
+            <section class="index__restaurants">
+                <h2>restaurants</h2>
+                <a href="menu1.html" class="menu1">
+                    <article class="restaurant">
+                        <div class="background background--dim-index">
+                            <article></article>
+                            <p>Nouveau</p>
+                        </div>
+                        <div class="restaurant__description">
+                            <div >
+                                <h3>la palette du goût</h3>
+                                <p>ménilmontant</p>
+                            </div>
+                            <p class="coeur">
+                                <i class="far fa-heart coeur--vide"></i>
+                                <i class="fas fa-heart coeur--plein"></i>
+                            </p>
+                        </div> 
+                    </article>
+                </a>
+                <a href="menu2.html" class="menu2">
+                    <article class="restaurant">
+                        <div class="background background--dim-index">
+                            <p>Nouveau</p>
+                        </div>
+                        <div class="restaurant__description">
+                            <div>
+                                <h3>la note enchantée</h3>
+                                <p>charonne</p>
+                            </div>
+                            <p class="coeur">
+                                <i class="far fa-heart coeur--vide"></i>
+                                <i class="fas fa-heart coeur--plein"></i>
+                            </p>
+                        </div> 
+                    </article>
+                </a>
+                <a href="menu3.html" class="menu3">
+                    <article class="restaurant">
+                        <div class="background background--dim-index">
+                            <article></article>
+                        </div>
+                        <div class="restaurant__description">
+                            <div>
+                                <h3>à la française</h3>
+                                <p>cité rouge</p>
+                            </div>
+                            <p class="coeur">
+                                <i class="far fa-heart coeur--vide"></i>
+                                <i class="fas fa-heart coeur--plein"></i>
+                            </p>
+                        </div> 
+                    </article>
+                </a>
+                <a href="menu4.html" class="menu4">
+                    <article class="restaurant">
+                        <div class="background background--dim-index">
+                            <article></article>
+                        </div>
+                        <div class="restaurant__description">
+                            <div>
+                                <h3>Le délice des sens</h3>
+                                <p>Folie-Méricourt</p>
+                            </div>
+                            <p class="coeur">
+                                <i class="far fa-heart coeur--vide"></i>
+                                <i class="fas fa-heart coeur--plein"></i>
+                            </p>
+                        </div> 
+                    </article>
+                </a>
+            </section>
+        </main>
+        <footer class="footer">
             <h2>ohmyfood</h2>
             <ul>
                 <li>
