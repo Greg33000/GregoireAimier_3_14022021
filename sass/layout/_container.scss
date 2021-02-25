@@ -7,36 +7,48 @@
     margin:10px;
     cursor: pointer;
     height:$box-height;
-    border-right: 0rem solid $color-tertiary;
-
-    transition: all 900ms;
-    &:hover{
-        border-right-width:80px;
-    }
     
-    @include border-radius($box-dim-border);
-    box-sizing: border-box;
+    
 
+    
+    
+    &:hover{
+        .box__check{
+            // animation: translate-coche 1s both;
+            width: 140px ;
+            
+            i{
+                animation: rotate-coche 1s forwards;
+                
+            }
+        }
+    }
+ 
+    @include border-radius($box-dim-border);
+    overflow: hidden;
     &__check{
-        // background-color: $color-tertiary;
         height: $box-height;
-        width:0px; 
-        // margin-right:-80px;
+        width:2 *$margin-mobile;
         @include flex-center;
         overflow: hidden;
+        background-color: $color-tertiary;
+        transition: width 1s;
+        overflow: hidden;
+        z-index:3;
+        margin-right:- 2 * $margin-mobile;
+        margin-left:  $margin-mobile;
+
 
         i{
             color:$color-writing-secondary;
             font-size:1.3rem;
-            transition: all 900ms ;
-            transform: rotate(-180deg);
-            overflow:hidden;
-            
+            overflow: hidden;
             position:relative;
-            right:0;
+            right: 3.5* $margin-mobile;
+
             
-        }
-        transition: all 900ms 250ms;        
+            
+        }     
     }
 
     
@@ -78,18 +90,6 @@
         
         }
 
-        &:hover + .box__check{
-            
-            width:80px; 
-            overflow: hidden;
-            margin-right:-80px;
-            i{
-                transform: rotate(0deg);
-                font-size:1.3rem;
-                overflow: hidden;
-                
-            }
-        }
         
         
     }
@@ -97,6 +97,7 @@
 .menu{
     width:100%;
     background-color: $color-background;
+    
     > div{
         display:flex;
         flex-direction:row;
@@ -136,12 +137,12 @@
 
 .background{
     width:100%;
-    
+    overflow: hidden;
     
     &__liseret{
         width:100%;
         height:40px;
-        border-radius:50px 50px 0px 0px;
+        
         background-color:$color-background;
     }
     &--dim-menu{
@@ -212,38 +213,6 @@
         z-index:2;
         color:$color-secondary;
         transition: opacity 450ms ease-in-out;
-    }
-}
-.restaurant{
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between ;
-    margin:20px $margin-mobile;
-    width:$width-high;
-    background-color: white;
-    @include border-radius($box-dim-border);
-    height:250px;
-
-    .background{
-        
-    }
-
-
-    &__description{
-        display:flex;
-        flex-direction:row;
-        justify-content:space-between ;
-
-        > div{
-            display:flex;
-            flex-direction:column;
-            justify-content:space-around ;
-            margin : 1rem 1rem;
-            font-size: 1rem;
-        }
-        >p{
-            margin : 1rem 1rem;
-            font-size: 1.5rem;
-        }
+        // background-color: red;
     }
 }

@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 .menu1 .background {
   background-image: url("../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   background-size: cover;
@@ -25,6 +24,22 @@
   background-repeat: no-repeat;
 }
 
+@keyframes translate-coche {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 65px;
+  }
+}
+@keyframes rotate-coche {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 body {
   margin: 0px;
 }
@@ -37,7 +52,6 @@ a {
 body {
   font-family: "Roboto", sans-serif;
   color: black;
-  font-size: small;
 }
 
 h1 {
@@ -137,32 +151,36 @@ h1 {
   margin: 10px;
   cursor: pointer;
   height: 65px;
-  border-right: 0rem solid #99E2D0;
-  transition: all 900ms;
   border-radius: 1rem;
   box-shadow: 0px 5px 10px grey;
-  box-sizing: border-box;
+  overflow: hidden;
 }
-.box:hover {
-  border-right-width: 80px;
+.box:hover .box__check {
+  width: 140px;
+}
+.box:hover .box__check i {
+  animation: rotate-coche 1s forwards;
 }
 .box__check {
   height: 65px;
-  width: 0px;
+  width: 7%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  transition: all 900ms 250ms;
+  background-color: #99E2D0;
+  transition: width 1s;
+  overflow: hidden;
+  z-index: 3;
+  margin-right: -7%;
+  margin-left: 3.5%;
 }
 .box__check i {
   color: #fff;
   font-size: 1.3rem;
-  transition: all 900ms;
-  transform: rotate(-180deg);
   overflow: hidden;
   position: relative;
-  right: 0;
+  right: 12.25%;
 }
 .box__description {
   width: 100%;
@@ -194,16 +212,6 @@ h1 {
 .box__description div p:nth-child(2) {
   font-size: 1rem;
   font-weight: bold;
-}
-.box__description:hover + .box__check {
-  width: 80px;
-  overflow: hidden;
-  margin-right: -80px;
-}
-.box__description:hover + .box__check i {
-  transform: rotate(0deg);
-  font-size: 1.3rem;
-  overflow: hidden;
 }
 
 .menu {
@@ -245,11 +253,11 @@ h1 {
 
 .background {
   width: 100%;
+  overflow: hidden;
 }
 .background__liseret {
   width: 100%;
   height: 40px;
-  border-radius: 50px 50px 0px 0px;
   background-color: #F2F2F2;
 }
 .background--dim-menu {
@@ -315,34 +323,6 @@ h1 {
   transition: opacity 450ms ease-in-out;
 }
 
-.restaurant {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 20px 3.5%;
-  width: 93%;
-  background-color: white;
-  border-radius: 1rem;
-  box-shadow: 0px 5px 10px grey;
-  height: 250px;
-}
-.restaurant__description {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.restaurant__description > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: 1rem 1rem;
-  font-size: 1rem;
-}
-.restaurant__description > p {
-  margin: 1rem 1rem;
-  font-size: 1.5rem;
-}
-
 .index {
   width: 100%;
   display: flex;
@@ -378,8 +358,12 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: #bfbfbf;
+  background-color: #d9d9d9;
   width: 100%;
+  padding: 10px;
+}
+.index .recherche i {
+  margin-right: 10px;
 }
 .index .reservation {
   display: flex;
@@ -393,6 +377,34 @@ h1 {
   text-align: center;
   font-weight: bold;
   margin: 15px 30px 10px 30px;
+}
+
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px 3.5%;
+  width: 93%;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0px 5px 10px grey;
+  height: 250px;
+}
+.restaurant__description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.restaurant__description > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 1rem 1rem;
+  font-size: 1rem;
+}
+.restaurant__description > p {
+  margin: 1rem 1rem;
+  font-size: 1.5rem;
 }
 
 p, h1, h2, h3 {
