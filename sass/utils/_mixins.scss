@@ -43,27 +43,50 @@
 }
 
 
+// Mixin intégration des médias => le site est "mobile-first"
+@mixin large-mobile{
+    @media screen and (min-width:map-get($breakpoints,large-mobile)){
+        @content;
+    }
+}
+@mixin tablet{
+    @media screen and (min-width:map-get($breakpoints,tablet)){
+        @content;
+    }
+}
+@mixin desktop{
+    @media screen and (min-width:map-get($breakpoints,desktop)){
+        @content;
+    }
+}
+@mixin large-desktop{
+    @media screen and (min-width:map-get($breakpoints,large-desktop)){
+        @content;
+    }
+}
+
+
 
 //@mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
 //    text-shadow: $offset $offset $colour;
 //}
 
-@mixin border($colour:$color-primary) {
-    border: .1rem solid $colour;
-}
+// @mixin border($colour:$color-primary) {
+//     border: .1rem solid $colour;
+// }
 
-@mixin img-ratio {
-    width: 100%;
-        display: block;
-        overflow: hidden;
-        padding-top: 56.25%;
-        position: relative;
-        & img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            transform: translate(-50%, -50%);
-        }
-}
+// @mixin img-ratio {
+//     width: 100%;
+//         display: block;
+//         overflow: hidden;
+//         padding-top: 56.25%;
+//         position: relative;
+//         & img {
+//             position: absolute;
+//             top: 50%;
+//             left: 50%;
+//             width: 100%;
+//             transform: translate(-50%, -50%);
+//         }
+// }
 
