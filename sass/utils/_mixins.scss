@@ -1,12 +1,25 @@
 @mixin background-menus {
     @each $menu,$img in $bkgd-img{
         .#{$menu} .background{
-            background-image: url("../img/restaurants/#{$img}") ;
+            background: url("../img/restaurants/#{$img}") no-repeat ;
             background-size: cover;
-            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position:center;
+
         }
     }
+    // @each $menu,$val in $bkgd-decalX{
+    //     .#{$menu} .background{
+    //         background-position-x:center $val;
+    //     }
+    // }
+    // @each $menu,$val in $bkgd-decalX{
+    //     .#{$menu} .background{
+    //         background-position-x:center $val;;
+    //     }
+    // }
 }
+
 
 // test
 @include background-menus;
@@ -14,7 +27,7 @@
 
 @mixin border-radius($dim:20%){
     border-radius: $dim ;
-    box-shadow: 0px 5px 10px grey;
+    box-shadow: 0px 5px 10px darken($color-background,20%);
 }
 
 @mixin flex-center{

@@ -8,6 +8,9 @@ $width-high:93%;
 $box-height:65px;
 $margin-mobile:(100%-$width-high)/2;
 $box-dim-border:1rem;
+$index-box-height:75px;
+$dim-index-cercle:12px;
+$width-medium:($width-high -- $dim-index-cercle/2);
 
 
 
@@ -17,4 +20,16 @@ $bkgd-img:(
     menu3:"toa-heftiba-DQKerTsQwi0-unsplash.jpg",
     menu4:"louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
 );
+// $bkgd-decalX:(
+//     menu1:2343/4402,
+//     menu2:2343/4402,
+//     menu3:2343/4402,
+//     menu4:2343/4402
+// );
+// $bkgd-decalY:(
+//     menu1:1639/2935,
+//     menu2:2343/4402,
+//     menu3:2343/4402,
+//     menu4:2343/4402
+// );
 

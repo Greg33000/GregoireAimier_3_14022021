@@ -14,37 +14,44 @@
     
     &:hover{
         .box__check{
-            // animation: translate-coche 1s both;
-            width: 140px ;
-            
+            width: 100px ;           
             i{
-                animation: rotate-coche 1s forwards;
-                
+                animation: rotate-coche 1s forwards;                
             }
         }
+        // Rajouté pour menu 2 en test
+        i{
+            animation: rotate-coche2 1s forwards;            
+        }
+    }
+    >i{
+        // Rajouté pour menu 2 en test
+        color:$color-writing-secondary;
+        font-size:1.3rem;
+        // overflow: hidden;
+        @include flex-center;
+        position:relative;
+        left:45px;
+
     }
  
     @include border-radius($box-dim-border);
     overflow: hidden;
     &__check{
         height: $box-height;
-        width:2 *$margin-mobile;
+        width:0;
         @include flex-center;
         overflow: hidden;
         background-color: $color-tertiary;
         transition: width 1s;
-        overflow: hidden;
-        z-index:3;
-        margin-right:- 2 * $margin-mobile;
-        margin-left:  $margin-mobile;
+        // margin-left:  $margin-mobile; 
 
 
         i{
             color:$color-writing-secondary;
             font-size:1.3rem;
             overflow: hidden;
-            position:relative;
-            right: 3.5* $margin-mobile;
+
 
             
             
@@ -97,15 +104,19 @@
 .menu{
     width:100%;
     background-color: $color-background;
-    
+    z-index:1;
+    // position:relative;
+    // bottom:30px;
+    margin-top:-30px;
+    border-radius: 30px  30px 0 0 ;
     > div{
         display:flex;
         flex-direction:row;
         justify-content:space-between ;
         align-items: center;
-        margin-top:0px;
         width:$width-high;
         margin:0px $margin-mobile;
+        padding-top:20px;
         
         i{
             font-size: 1.8rem;
@@ -137,31 +148,24 @@
 
 .background{
     width:100%;
-    overflow: hidden;
+    z-index: 2;
     
-    &__liseret{
-        width:100%;
-        height:40px;
-        
-        background-color:$color-background;
-    }
     &--dim-menu{
-        height:230px;
+        height:255px;
         display:flex;
         flex-direction:column;
         justify-content:space-between ;
-        align-items: center;
+        
         
     }
     &--dim-index{
         
-        height:174px;
+        min-height:174px;
         border-radius: $box-dim-border $box-dim-border 0px 0px ;
         display:flex;
         flex-direction:row;
         justify-content:flex-end ;
         align-items:flex-start;
-        background-position-y:-50px;
         
         
 

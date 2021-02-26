@@ -1,39 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 .menu1 .background {
-  background-image: url("../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background: url("../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
 }
 
 .menu2 .background {
-  background-image: url("../img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background: url("../img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg") no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
 }
 
 .menu3 .background {
-  background-image: url("../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background: url("../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg") no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
 }
 
 .menu4 .background {
-  background-image: url("../img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background: url("../img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
 }
 
-@keyframes translate-coche {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 65px;
-  }
-}
 @keyframes rotate-coche {
   0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotate-coche2 {
+  0% {
+    transform: rotate(-360deg);
+  }
+  5% {
     transform: rotate(-360deg);
   }
   100% {
@@ -60,7 +67,7 @@ h1 {
 
 .btn {
   border-radius: 2rem;
-  box-shadow: 0px 5px 10px grey;
+  box-shadow: 0px 5px 10px #bfbfbf;
   color: #fff;
   background: linear-gradient(#FF79DA, #9356DC);
   height: 50px;
@@ -70,11 +77,14 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  transition: all 300ms;
   cursor: pointer;
   padding: 0px 25px;
 }
 .btn:hover {
   opacity: 0.9;
+  box-shadow: 0px 5px 10px #737373;
 }
 
 .header {
@@ -152,35 +162,41 @@ h1 {
   cursor: pointer;
   height: 65px;
   border-radius: 1rem;
-  box-shadow: 0px 5px 10px grey;
+  box-shadow: 0px 5px 10px #bfbfbf;
   overflow: hidden;
 }
 .box:hover .box__check {
-  width: 140px;
+  width: 100px;
 }
 .box:hover .box__check i {
   animation: rotate-coche 1s forwards;
 }
+.box:hover i {
+  animation: rotate-coche2 1s forwards;
+}
+.box > i {
+  color: #fff;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 45px;
+}
 .box__check {
   height: 65px;
-  width: 7%;
+  width: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   background-color: #99E2D0;
   transition: width 1s;
-  overflow: hidden;
-  z-index: 3;
-  margin-right: -7%;
-  margin-left: 3.5%;
 }
 .box__check i {
   color: #fff;
   font-size: 1.3rem;
   overflow: hidden;
-  position: relative;
-  right: 12.25%;
 }
 .box__description {
   width: 100%;
@@ -217,15 +233,18 @@ h1 {
 .menu {
   width: 100%;
   background-color: #F2F2F2;
+  z-index: 1;
+  margin-top: -30px;
+  border-radius: 30px 30px 0 0;
 }
 .menu > div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 0px;
   width: 93%;
   margin: 0px 3.5%;
+  padding-top: 20px;
 }
 .menu > div i {
   font-size: 1.8rem;
@@ -253,28 +272,21 @@ h1 {
 
 .background {
   width: 100%;
-  overflow: hidden;
-}
-.background__liseret {
-  width: 100%;
-  height: 40px;
-  background-color: #F2F2F2;
+  z-index: 2;
 }
 .background--dim-menu {
-  height: 230px;
+  height: 255px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 }
 .background--dim-index {
-  height: 174px;
+  min-height: 174px;
   border-radius: 1rem 1rem 0px 0px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: flex-start;
-  background-position-y: -50px;
 }
 .background--dim-index > p {
   position: relative;
@@ -341,6 +353,12 @@ h1 {
   background-color: white;
   padding: 30px 0px;
 }
+.index__fonctionnement div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
 .index__restaurants {
   background-color: #F2F2F2;
   padding: 30px 0px;
@@ -370,6 +388,7 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 10px 30px;
 }
 .index .reservation h1 {
   font-family: "Roboto", sans-serif;
@@ -377,6 +396,10 @@ h1 {
   text-align: center;
   font-weight: bold;
   margin: 15px 30px 10px 30px;
+}
+.index .reservation p {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .restaurant {
@@ -387,7 +410,7 @@ h1 {
   width: 93%;
   background-color: white;
   border-radius: 1rem;
-  box-shadow: 0px 5px 10px grey;
+  box-shadow: 0px 5px 10px #bfbfbf;
   height: 250px;
 }
 .restaurant__description {
@@ -405,6 +428,53 @@ h1 {
 .restaurant__description > p {
   margin: 1rem 1rem;
   font-size: 1.5rem;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 93% -- 6px;
+  height: 75px;
+  border-radius: 1.3rem;
+  box-shadow: 0px 5px 10px #bfbfbf;
+  margin: 12px 3.5% 12px 7%;
+}
+.fonctionnement__indice {
+  margin-right: 10px;
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 12px;
+  font-size: 0.9rem;
+}
+.fonctionnement i {
+  margin-right: 25px;
+  width: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.fonctionnement--color {
+  background-color: #e4d5f6;
+}
+.fonctionnement--color i {
+  color: #9356DC;
+}
+.fonctionnement--nocolor {
+  background-color: #F2F2F2;
+}
+.fonctionnement--nocolor i {
+  color: #737373;
 }
 
 p, h1, h2, h3 {
