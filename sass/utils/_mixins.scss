@@ -5,25 +5,9 @@
             background-size: cover;
             background-attachment: scroll;
             background-position:center;
-
         }
     }
-    // @each $menu,$val in $bkgd-decalX{
-    //     .#{$menu} .background{
-    //         background-position-x:center $val;
-    //     }
-    // }
-    // @each $menu,$val in $bkgd-decalX{
-    //     .#{$menu} .background{
-    //         background-position-x:center $val;;
-    //     }
-    // }
 }
-
-
-// test
-@include background-menus;
-
 
 @mixin border-radius($dim:20%){
     border-radius: $dim ;
@@ -41,7 +25,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
 
 // Mixin intégration des médias => le site est "mobile-first"
 @mixin large-mobile{
@@ -64,29 +47,3 @@
         @content;
     }
 }
-
-
-
-//@mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
-//    text-shadow: $offset $offset $colour;
-//}
-
-// @mixin border($colour:$color-primary) {
-//     border: .1rem solid $colour;
-// }
-
-// @mixin img-ratio {
-//     width: 100%;
-//         display: block;
-//         overflow: hidden;
-//         padding-top: 56.25%;
-//         position: relative;
-//         & img {
-//             position: absolute;
-//             top: 50%;
-//             left: 50%;
-//             width: 100%;
-//             transform: translate(-50%, -50%);
-//         }
-// }
-
