@@ -146,13 +146,13 @@ h1 {
   width: 100%;
   font-size: 1.1rem;
   font-weight: bold;
-  padding-left: 5.25%;
   padding-bottom: 20px;
 }
 .footer h2 {
   font-family: "Shrikhand", cursive;
   padding: 30px 0px 10px 0px;
   font-size: 1.5rem;
+  padding-left: 5.25%;
 }
 .footer a {
   text-decoration: none;
@@ -162,6 +162,7 @@ h1 {
   list-style: none;
   padding: 0px;
   margin: 0px;
+  padding-left: 5.25%;
 }
 .footer li {
   margin: 5px 0px;
@@ -615,7 +616,6 @@ h1 {
   flex-direction: row;
   background-color: #d9d9d9;
   width: 100%;
-  padding: 10px;
 }
 .index .recherche i {
   margin-right: 10px;
@@ -672,7 +672,6 @@ h1 {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 93%;
   height: 75px;
   border-radius: 1.3rem;
   box-shadow: 0px 5px 10px #bfbfbf;
