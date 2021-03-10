@@ -161,6 +161,7 @@
     }
 
     // Mise à jour suite soutenance : les "boutons" doivent passer en violet lors du survol
+    background-color: $color-background;
     transition:all 300ms;
     cursor: pointer;
     &:hover{
