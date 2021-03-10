@@ -149,27 +149,28 @@
     i {
         margin-right:25px;
         width:1.3rem;
+        color: darken($color-background,50%);
         @include flex-center;
         font-size:1.3rem;
         @include tablet{
             margin-right:10px;
-        }
-    }
-    &--color{
-        background-color: lighten($color-primary,30%);
-        i {
-            color: $color-primary;
-        }
-    }
-    &--nocolor{
-        background-color: $color-background;
-        i {
-            color: darken($color-background,50%);
-        }
+        }   
     }
     p{
         font-weight: bold;
     }
+
+    // Mise à jour suite soutenance : les "boutons" doivent passer en violet lors du survol
+    transition:all 300ms;
+    cursor: pointer;
+    &:hover{
+        background-color: lighten($color-primary,30%);
+        box-shadow: 0px 5px 10px darken($color-background,50%);
+        i {
+            color: $color-primary;
+        }
+    }
+    
 }
 
 // loading spinner
